@@ -1,4 +1,5 @@
 import reflex as rx
+from link_bio.styles.styles import Spacer as Size
 
 def navbar() -> rx.Component:
     return rx.hstack (
@@ -8,7 +9,8 @@ def navbar() -> rx.Component:
         ),
         position="sticky",
         bg="ligthgray",
-        padding_x="16px",
-        padding_y="16px",
-        z_index="999"
+        padding_x=Size.DEFAULT.value,
+        padding_y=Size.SMALL.value,
+        z_index="999",
+        top="0"
     )
