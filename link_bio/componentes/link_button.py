@@ -8,12 +8,16 @@ def link_button(title: str, body: str, url: str) -> rx.Component:
                 rx.icon(
                     tag="arrow_forward",
                     width=styles.Spacer.BIG.value,
-                    height=styles.Spacer.BIG.value
+                    height=styles.Spacer.BIG.value,
+                    marging=styles.Spacer.MEDIUM.value,
                     
                 ),
                 rx.vstack(
                     rx.text(title, style=styles.button_tittle_style),
-                    rx.text(body, style=styles.button_body_style)
+                    rx.text(body, style=styles.button_body_style),
+                    spacing=styles.Spacer.SMALL.value,
+                    align_items="start",
+                    marging=styles.Spacer.ZERO.value,
                 )
             )
             

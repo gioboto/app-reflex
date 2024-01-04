@@ -1,6 +1,7 @@
 import reflex as  rx
 import datetime
 from link_bio.styles.styles import Spacer as Size
+from link_bio.styles.styles import TextColor as TextColor
 
 def footer() -> rx.Component:
     return rx.vstack(
@@ -14,5 +15,7 @@ def footer() -> rx.Component:
             font_size=Size.MEDIUM.value,
             margin_top="0px !important"
         ),
-        margin_bottom=Size.BIG.value
+        margin_bottom=Size.BIG.value,
+        padding_bottom=Size.BIG.value,
+        color=TextColor.FOOTER.value
     )

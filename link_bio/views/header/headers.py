@@ -1,20 +1,31 @@
 import reflex as rx
 from link_bio.componentes.info_text import info_text
 from link_bio.styles.styles import Spacer as Size
+from link_bio.styles.colors import TextColor as TextColor
+from link_bio.styles.colors import Color as Color
 from link_bio.componentes.link_icon import link_icon
+from link_bio.componentes.title import title
 
 def header() -> rx.Component:
     return rx.vstack(
         rx.hstack(
             rx.avatar(name="Jorg N.",
-                      size="xl"),
+                      size="xl",
+                      src="fehu.png",
+                      color=TextColor.BODY.value,
+                      bg=Color.CONTENT.value,
+                      padding="2px",
+                      border="4px",
+                      border_color=Color.PRIMARY.value  
+                      ),
             rx.vstack(
-                rx.heading("Jorge N", 
-                        size="lg"
+                rx.heading("Jorge N",
+                         
                 ),
                 rx.text(
                     "  @El boto",
-                    margin_top="0px !important"
+                    margin_top=Size.ZERO.value,
+                    color=TextColor.BODY.value
                 ),
                 rx.hstack(
                 link_icon("http://fehu.me"),
@@ -35,7 +46,8 @@ def header() -> rx.Component:
             width="100%"
         ),
         
-        rx.text(" tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto "),
+        rx.text(" tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto ",
+                color= TextColor.BODY.value),
         spacing=Size.BIG.value,
         align_items="start"
     )
