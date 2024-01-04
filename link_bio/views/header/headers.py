@@ -28,9 +28,9 @@ def header() -> rx.Component:
                     color=TextColor.BODY.value
                 ),
                 rx.hstack(
-                link_icon("http://fehu.me"),
-                link_icon("http://fehu.me"),
-                link_icon("http://fehu.me")
+                link_icon("icons/youtube.svg","http://fehu.me", "Alt text"),
+                link_icon("icons/youtube.svg","http://fehu.me", "Alt text"),
+                link_icon("icons/youtube.svg","http://fehu.me", "Alt text")
                 ),
             ),
             
@@ -47,7 +47,9 @@ def header() -> rx.Component:
         ),
         
         rx.text(" tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto  tesxto testto texto ",
-                color= TextColor.BODY.value),
+                color= TextColor.BODY.value,
+                font_size=Size.DEFAULT.value,
+                ),
         spacing=Size.BIG.value,
         align_items="start"
     )

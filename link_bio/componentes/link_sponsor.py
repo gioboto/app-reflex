@@ -1,15 +1,16 @@
 import reflex as rx
+import link_bio.styles.styles as styles
 from link_bio.styles.styles import Spacer as Size
 
-def link_icon(image: str, url: str, alt: str) -> rx.Component:
+def link_sponsor(imagen: str, url: str, alt: str) -> rx.Component:
     return rx.link(
         rx.image(
-            src=image,
-            witdth=Size.DEFAULT.value,
+            height=Size.VERY_BIG.value,
+            width="auto",
+            src=imagen,
             alt=alt
             
         ),
         href=url,
         is_external=True
-        
     )

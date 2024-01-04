@@ -3,6 +3,7 @@ from link_bio.componentes.navbar import navbar
 from link_bio.componentes.footer import footer
 from link_bio.views.header.headers import header
 from link_bio.views.links.links import links
+from link_bio.views.sponsors.sponsors import sponsors
 import link_bio.styles.styles as styles
 from link_bio.styles.styles import Spacer as Size
 
@@ -16,6 +17,7 @@ def index() -> rx.Component:
             rx.vstack(
                 header(),
                 links(),
+                sponsors(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y = Size.BIG.value,
@@ -27,7 +29,13 @@ def index() -> rx.Component:
     )
 
 app = rx.App(
-    style=styles.BASE_STYLES
+    style=styles.BASE_STYLES,
+    stylesheets=styles.STYLESHEETS
 )
-app.add_page(index)
+app.add_page(
+    index,
+    title="Titulo de la pag",
+    description="Descripcion de la pag",
+    image="fehu.png"
+    )
 app.compile()
